@@ -7,19 +7,42 @@
   <link href='http://fonts.googleapis.com/css?family=Cutive+Mono' rel='stylesheet' type='text/css'>
   <link href='http://fonts.googleapis.com/css?family=Reenie+Beanie' rel='stylesheet' type='text/css'>
   <link href='vogue.css' rel='stylesheet' type='text/css'>
+    <script type='text/javascript'>
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-26436542-1']);
+      _gaq.push(['_setDomainName', 'kardans.com']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+
+      function recordOutboundLink(link, category, action) {
+        try {
+          var pageTracker=_gat._getTracker('UA-26436542-1');
+          pageTracker._trackEvent(category, action);
+          setTimeout('document.location = "' + link.href + '"', 100)
+        } catch(err){}
+      }
+    </script>
 </head>
 <body>
   <div id='wrap' class='wrap'>
     <nav>
       <ul>
         <li>
-          <a class="navLink" href="http://twitter.com/kardan">Twitter</a>
+          <a class="navLink" href="http://twitter.com/kardan" onClick="recordOutboundLink(this, 'Outbound Links', 'twitter');return false;">Twitter</a>
         </li>
         <li>
-          <a class="navLink" href="http://github.com/kardan">Github</a>
+          <a class="navLink" href="http://github.com/kardan" onclick="recordOutboundLink(this, 'Outbound Links', 'github');return false;" >Github</a>
         </li>
         <li>
-          <a href="http://instagram.com/_kardan/">Instagram</a>
+          <a href="http://instagram.com/_kardan/" onclick="recordOutboundLink(this, 'Outbound Links', 'instagram');return false;">Instagram</a>
+        </li>
+        <li>
+          <a class="navLink" href="https://plus.google.com/108979460902191936128/" onclick="recordOutboundLink(this, 'Outbound Links', 'google-plus');return false;">Google+</a>
         </li>
       </ul>
     </nav>
