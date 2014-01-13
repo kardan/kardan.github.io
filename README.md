@@ -1,3 +1,3 @@
-kardan.github.io -> kardans.com
+kardan.github.io
 ================
-A simple web page
+Running at kardans.com.
