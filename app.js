@@ -36,10 +36,10 @@
         },
 
         setupCover: function () {
-            $.get("cover.jpg", function (data) {
+            $.get("e.jpeg", function (data) {
                 $('#wrap').removeAttr("style");
                 $('#wrap').css({
-                    'background': 'url(cover.jpg) no-repeat center center fixed',
+                    'background': 'url(e.jpeg) no-repeat center center fixed',
                     '-webkit-background-size': 'cover',
                     '-moz-background-size': 'cover',
                     '-o-background-size': 'cover',
@@ -47,7 +47,7 @@
                 });
                 $('#wrap').attr('id', '#wrap2');
                 $('body').css({
-                    'background': 'url(cover.jpg) no-repeat center center fixed',
+                    'background': 'url(e.jpeg) no-repeat center center fixed',
                     '-webkit-background-size': 'cover',
                     '-moz-background-size': 'cover',
                     '-o-background-size': 'cover',

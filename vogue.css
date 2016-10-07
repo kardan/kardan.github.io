@@ -1,5 +1,5 @@
 body, .wrap {
-    background: url(preview.jpg) no-repeat center center fixed;
+    background: url(e_preview.jpeg) no-repeat center center fixed;
     -moz-background-size: cover;
     -o-background-size: cover;
     -webkit-background-size: cover;
@@ -24,7 +24,7 @@ body {
     }
 
 article {
-    background: #111;
+  background: #111;
     margin: 48px 96px 48px auto;
     opacity: 0.8;
     padding: 12px;
