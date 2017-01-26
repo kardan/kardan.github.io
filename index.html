@@ -8,24 +8,20 @@
     <link href='http://fonts.googleapis.com/css?family=Cutive+Mono' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Reenie+Beanie' rel='stylesheet' type='text/css'>
     <link href='vogue.css' rel='stylesheet' type='text/css'>
-    <script type='text/javascript'>
-     var _gaq = _gaq || [];
-     _gaq.push(['_setAccount', 'UA-26436542-1']);
-     _gaq.push(['_setDomainName', 'kardans.com']);
-     _gaq.push(['_trackPageview']);
+    <script>
+     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+         (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+         m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
-     (function() {
-         var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-         ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-         var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-     })();
+     ga('create', 'UA-26436542-1', 'auto');
+     ga('send', 'pageview');
 
-     function recordOutboundLink(link, category, action) {
-         try {
-             var pageTracker=_gat._getTracker('UA-26436542-1');
-             pageTracker._trackEvent(category, action);
-             setTimeout('document.location = "' + link.href + '"', 100)
-         } catch(err){}
+     var trackOutboundLink = function(url) {
+         ga('send', 'event', 'outbound', 'click', url, {
+             'transport': 'beacon',
+             'hitCallback': function(){document.location = url;}
+         });
      }
     </script>
   </head>
@@ -34,16 +30,13 @@
       <nav>
         <ul>
           <li>
-            <a class="navLink" href="https://keybase.io/kardan" onClick="recordOutboundLink(this, 'Outbound Links', 'keybase');return false;">Keybase</a>
+            <a class="navLink" href="https://keybase.io/kardan" onclick="trackOutboundLink('https://keybase.io/kardan'); return false;">Keybase</a>
           </li>
           <li>
-            <a class="navLink" href="https://github.com/kardan" onclick="recordOutboundLink(this, 'Outbound Links', 'github');return false;" >Github</a>
+            <a class="navLink" href="https://github.com/kardan" onclick="trackOutboundLink('https://github.com/kardan'); return false;">Github</a>
           </li>
           <li>
-            <a class="navLink" href="https://twitter.com/kardan" onClick="recordOutboundLink(this, 'Outbound Links', 'twitter');return false;">Twitter</a>
-          </li>
-          <li>
-            <a href="https://instagram.com/_kardan/" onclick="recordOutboundLink(this, 'Outbound Links', 'instagram');return false;">Instagram</a>
+            <a class="navLink" href="https://twitter.com/kardan" onclick="trackOutboundLink('https://twitter.com/kardan'); return false;">Twitter</a>
           </li>
         </ul>
       </nav>
@@ -51,7 +44,7 @@
         <h1>kar<span style="color:#A1B1AD;">lsson</span> dan<span style="color:#A1B1AD;">iel&#39;</span>s </h1>
         <p>
           <p>
-            &raquo; Father, lover, coder &amp; runner, living in Gothenburg Sweden. Assembling the World Wide Web with Clojure, Erlang, JavaScript &amp; Python. Cronic plauges involves asking why, intj:ing, organizing &amp; simplifying. Currently I'm helping <a href="http://www.akvo.org">Akvo.org</a> with web development. A long time ago I studied International Project Management and Software Engineering.
+            &raquo; Father, lover, coder &amp; runner, living in Gothenburg Sweden. Currently I'm helping <a href="http://www.akvo.org" onclick="trackOutboundlink('http://www.akvo.org'); return false;">Akvo.org</a> build <a href="https://github.com/akvo/akvo-lumen" onclick="trackOutBoundlink('https://github.com/akvo/akvo-lumen'); return false;">Lumen</a> using Clojure, Postgres, JavaScript, React, Openid Connect & Kubernetes. A long time ago I studied International Project Management and Software Engineering.
           </p>
           <p style="margin-top:24px;">
             <span id="sign" class="handwriting twisted"><script type="text/javascript">document.write(
@@ -60,10 +53,10 @@
           </p>
       </article>
       <footer>
-        <p>Photography by <a href="http://www.loicsans.com/" onClick="recordOutboundLink(this, 'Outbound Links', 'loic');return false;">Lo&iuml;c Sans</a></p>
+        <p>Photography by <a href="http://www.loicsans.com" onclick="trackOutboundLink('http://www.loicsans.com'); return false;">Lo&iuml;c Sans</a></p>
       </footer>
     </div>
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="app.js"></script>
   </body>
 </html>
