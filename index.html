@@ -8,55 +8,39 @@
     <link href='https://fonts.googleapis.com/css?family=Cutive+Mono' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Reenie+Beanie' rel='stylesheet' type='text/css'>
     <link href='vogue.css' rel='stylesheet' type='text/css'>
-    <script>
-     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-         (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-         m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-     ga('create', 'UA-26436542-1', 'auto');
-     ga('send', 'pageview');
-
-     var trackOutboundLink = function(url) {
-         ga('send', 'event', 'outbound', 'click', url, {
-             'transport': 'beacon',
-             'hitCallback': function(){document.location = url;}
-         });
-     }
-    </script>
   </head>
   <body>
     <div id='wrap' class='wrap'>
       <nav>
         <ul>
-          <li>
-            <a class="navLink" href="https://keybase.io/kardan" onclick="trackOutboundLink('https://keybase.io/kardan'); return false;">Keybase</a>
-          </li>
-          <li>
-            <a class="navLink" href="https://github.com/kardan" onclick="trackOutboundLink('https://github.com/kardan'); return false;">Github</a>
-          </li>
-          <li>
-            <a class="navLink" href="https://twitter.com/kardan" onclick="trackOutboundLink('https://twitter.com/kardan'); return false;">Twitter</a>
-          </li>
+            <li>
+                <a class="navLink" href="https://github.com/kardan" onclick="sa_event('click_github');">Github</a>
+            </li>
+            <li>
+                <a class="navLink" href="https://www.linkedin.com/in/daniel-sunnerek/" onclick="sa_event('click_linkedin');">Linkedin</a>
+            </li>
+            <li>
+                <a class="navLink" href="https://twitter.com/kardan" onclick="sa_event('click_twitter');">Twitter</a>
+            </li>
         </ul>
       </nav>
       <article id="presentation">
         <h1>kar<span style="color:#A1B1AD;">l</span> dan<span style="color:#A1B1AD;">iel</span> s<span style="color:#A1B1AD;">unnerek</span></h1>
         <p>
           <p>
-            &raquo; Father, lover, coder &amp; runner, living in Gothenburg Sweden. Currently I'm helping <a href="http://www.akvo.org" onclick="trackOutboundLink('http://www.akvo.org'); return false;">Akvo.org</a> build <a href="https://github.com/akvo/akvo-lumen" onclick="trackOutboundLink('https://github.com/akvo/akvo-lumen'); return false;">Lumen</a> using Clojure, Postgres, JavaScript, React, Openid Connect & Kubernetes. A long time ago I studied International Project Management and Software Engineering.
+            &raquo; Father, lover, coder &amp; runner, living in Gothenburg Sweden. Currently I'm helping <a href="http://www.akvo.org" onclick="sa_event('click_akvo.org');">Akvo.org</a> build <a href="https://github.com/akvo/akvo-lumen" onclick="sa_event('click_github_lumen');">Lumen</a> using Clojure, Postgres, JavaScript, React, Openid Connect & Kubernetes. A long time ago I studied International Project Management and Software Engineering.
           </p>
           <p style="margin-top:24px;">
               <span id="sign" class="handwriting twisted"><script type="text/javascript">document.write(
-"<n uers=\"znvygb:qnavry\100xneqnaf\056pbz\" bapyvpx=\"erpbeqBhgobhaqYvax(guvf, 'Bhgobhaq Yvaxf', 'rznvy');erghea snyfr;\">Qnavry Fhaarerx<oe>&aofc;qnavry\100xneqnaf\056pbz<\057n>".replace(/[a-zA-Z]/g, function(c){return String.fromCharCode((c<="Z"?90:122)>=(c=c.charCodeAt(0)+13)?c:c-26);}));
-              </script></span>
+                                                               "<n uers=\"znvygb:qnavry\100fhaarerx\056fr\" bapyvpx=\"fn_rirag('pyvpx_rznvy');\">qnavry\100fhaarerx\056fr<\057n>".replace(/[a-zA-Z]/g, function(c){return String.fromCharCode((c<="Z"?90:122)>=(c=c.charCodeAt(0)+13)?c:c-26);})); </script></span>
           </p>
       </article>
       <footer>
-        <p>Photography by <a href="http://www.loicsans.com" onclick="trackOutboundLink('http://www.loicsans.com'); return false;">Lo&iuml;c Sans</a></p>
+          <p>Photography by <a href="http://www.loicsans.com" onclick="sa_event('click_loic_sans');">Lo&iuml;c Sans</a></p>
       </footer>
     </div>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script src="app.js"></script>
+    <script>window.sa_event=window.sa_event||function(){a=[].slice.call(arguments);sa_event.q?sa_event.q.push(a):sa_event.q=[a]};</script>
+    <script async defer src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
+    <noscript><img src="https://queue.simpleanalyticscdn.com/noscript.gif" alt=""/></noscript>
   </body>
 </html>
